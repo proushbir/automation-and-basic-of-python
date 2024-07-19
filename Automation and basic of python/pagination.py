@@ -10,7 +10,7 @@ import time
 driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 #get the website url:
-website_url="https://www.sharesansar.com/company/niblace"
+website_url="https://www.sharesansar.com/"
 
 #open the website url
 driver.get(website_url)
@@ -20,13 +20,10 @@ driver.maximize_window()
 
 time.sleep(2)
 
-# search=driver.find_element(*(By.XPATH,"//input[@id='company_search']"))
-# search.send_keys("(NIBLACE)")
-#
-# options_xpath="//li[contains(text(), '(NIBLACE) NIBL Ace Capital Limited')]"
-#
-# options=WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,options_xpath)))
-# options.click()
+search=driver.find_element(*(By.XPATH,"//input[@id='company_search']"))
+search.send_keys("NIBLACE")
+
+search.submit()
 
 news=driver.find_element(*(By.XPATH,"//a[@id='btn_cnews']"))
 news.click()
