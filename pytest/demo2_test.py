@@ -16,6 +16,7 @@ def driver():
     yield driver
     #close the driver
     driver.quit()
+
 def test_google_search(driver):
     #set the website
     website_url=driver.get("https://www.google.com/")
