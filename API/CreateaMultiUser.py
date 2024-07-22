@@ -34,5 +34,7 @@ def post_request(user_names):
 
 #user name example:
 user_names=["Proush","Rupak","Saroj","Surakshya","Ushav","Nikita","Sapana"]
-user_ids=post_request(user_names)
-print("Created user Id:",user_ids)
+
+for _ in range(0,10):
+    user_ids=post_request(user_names)
+    print("Created user Id:",user_ids)
